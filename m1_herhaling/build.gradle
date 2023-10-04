@@ -3,9 +3,8 @@ plugins {
     id 'application'
 }
 
-application {
-    mainClass.set('be.kdg.java2.Demo')
-}
+sourceCompatibility = 17
+mainClassName='Demo'
 
 group 'be.kdg.java2'
 version '1.0-SNAPSHOT'
