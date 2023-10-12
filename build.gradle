@@ -7,7 +7,7 @@ group 'be.kdg.java2'
 version '1.0-SNAPSHOT'
 
 application {
-    mainClass.set('be.kdg.java2.Demo')
+    mainClass.set('be.kdg.java2.Demo_3')
 
 }
 repositories {

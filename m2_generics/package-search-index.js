@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"be.kdg.java2.Data"},{"l":"be.kdg.java2.model"}];updateSearchResults();

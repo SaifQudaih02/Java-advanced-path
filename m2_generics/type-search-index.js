@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"be.kdg.java2.model","l":"Category"},{"p":"be.kdg.java2.Data","l":"Data"},{"p":"<Unnamed>","l":"Demo_2"},{"p":"be.kdg.java2.model","l":"FIFOQueue"},{"p":"be.kdg.java2.model","l":"Laptop"},{"p":"be.kdg.java2.model","l":"PriorityQueue"}];updateSearchResults();
