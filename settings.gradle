@@ -3,4 +3,5 @@ include 'm1_herhaling'
 include 'm2_generics'
 include 'm3_reflection'
 include 'm2_generics2'
+include 'm4_streams'
 
