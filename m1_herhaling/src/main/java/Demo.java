@@ -60,13 +60,13 @@ public class Demo {
         // f. Test beide constructors uit en ook de IllegalArgumentException
         try {
             Laptop invalidLaptop = new Laptop("", "Zwart", 899.99, 16, 512, Category.GAMING, LocalDate.of(2022, 5, 15), "ABCD12345");
-        } catch (IllegalAccessException e) {
+        } catch (IllegalArgumentException e) {
             System.out.println("IllegalArgumentException: " + e.getMessage());
         }
 
         try {
             Laptop validLaptop = new Laptop("Lenovo", "Grijs", 599.99, 4, 128, Category.HOME, LocalDate.of(2022, 3, 25), "QRST67890");
-        } catch (IllegalAccessException e) {
+        } catch (IllegalArgumentException e) {
             System.out.println("IllegalArgumentException: " + e.getMessage());
         }
 

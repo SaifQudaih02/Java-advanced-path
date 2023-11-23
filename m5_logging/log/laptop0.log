@@ -1,0 +1,20 @@
+nov. 22, 2023 11:41:47 A.M. be.kdg.java2.model.Laptop setName
+SEVERE: The name cannot be empty or null for this Laptop: 'null' is not a valid name for this Laptop
+nov. 22, 2023 11:41:47 A.M. be.kdg.java2.model.Laptop setReleaseDate
+SEVERE: Release date must be older than today: 2078-12-18
+nov. 22, 2023 11:41:50 A.M. be.kdg.java2.model.Laptop setName
+SEVERE: The name cannot be empty or null for this Laptop: 'null' is not a valid name for this Laptop
+nov. 22, 2023 11:41:50 A.M. be.kdg.java2.model.Laptop setReleaseDate
+SEVERE: Release date must be older than today: 2078-12-18
+nov. 22, 2023 12:05:56 P.M. be.kdg.java2.model.Laptop setName
+SEVERE: The name cannot be empty or null for this Laptop: 'null' is not a valid name for this Laptop
+nov. 22, 2023 12:05:56 P.M. be.kdg.java2.model.Laptop setReleaseDate
+SEVERE: Release date must be older than today: 2078-12-18
+nov. 22, 2023 12:05:56 P.M. Demo_5 main
+INFO: eel log
+nov. 23, 2023 6:52:25 P.M. be.kdg.java2.model.Laptop setName
+SEVERE: The name cannot be empty or null for this Laptop: 'null' is not a valid name for this Laptop
+nov. 23, 2023 6:52:25 P.M. be.kdg.java2.model.Laptop setReleaseDate
+SEVERE: Release date must be older than today: 2078-12-18
+nov. 23, 2023 6:52:25 P.M. Demo_5 main
+INFO: eel log

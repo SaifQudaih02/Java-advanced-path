@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Data {
 
-    public static List<Laptop> getData() throws IllegalAccessException {
+    public static List<Laptop> getData() {
         List<Laptop> laptops = new ArrayList<>();
         laptops.add(new Laptop("HP", "Zwart", 899.99, 16, 512, Category.GAMING, LocalDate.of(2022, 5, 15), "ABCD12345"));
         laptops.add(new Laptop("SAMSUNG", "Zilver", 999.99, 8, 256, Category.BUSINESS, LocalDate.of(2022, 4, 10), "EFGH67890"));

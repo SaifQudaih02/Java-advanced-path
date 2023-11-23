@@ -9,7 +9,7 @@ public class Laptops {
         laptopSet= new TreeSet<>();
     }
 
-    public boolean setLaptop(Laptop laptop){
+    public boolean addLaptop(Laptop laptop){
         return laptopSet.add(laptop);
     }
 

@@ -15,12 +15,12 @@ public class Laptop implements Comparable<Laptop>{
     private LocalDate releaseDate;
     private String macAdres;
 
-    public Laptop() throws IllegalAccessException {
+    public Laptop() throws IllegalArgumentException {
         this("Anoniem", "Ongekend", 0.0, 0, 0, Category.UNKNOWN  , LocalDate.now() , "onbekend");
 
     }
 
-    public Laptop(String name, String colour, double price, int ram, int storage, Category category, LocalDate releaseDate , String macAdres) throws IllegalAccessException {
+    public Laptop(String name, String colour, double price, int ram, int storage, Category category, LocalDate releaseDate , String macAdres) throws IllegalArgumentException {
 
         this.setName(name);
         this.setColour(colour);
@@ -33,18 +33,14 @@ public class Laptop implements Comparable<Laptop>{
 
     }
 
-    public Laptop(List<Laptop> data) {
-    }
-
-
-    public void setName(String name) throws IllegalAccessException {
+    public void setName(String name) throws IllegalArgumentException {
 
         if ( name != null && !name.isEmpty()){
             this.name=name;
 
         }else {
             System.out.println("The name cannot be empty!!");
-            throw  new IllegalAccessException("Something went wrong 'with the name'!!");
+            throw  new IllegalArgumentException("Something went wrong 'with the name'!!");
 
         }
     }

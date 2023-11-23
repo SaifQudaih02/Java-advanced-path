@@ -37,7 +37,6 @@ public class LaptopFunctions {
                     .orElse(0.0);
     }
 
-    // TODO geeft alle laptops 15 terug "cond wordt niet toegepast"
     public static <T> long countIf(List<T> laptopList, Predicate<T> predicate){
 //        long sum = 0;
 //        for (T t : laptopList){

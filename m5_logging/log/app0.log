@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-11-23T20:10:10.893355900Z</date>
+  <millis>1700770210893</millis>
+  <nanos>355900</nanos>
+  <sequence>0</sequence>
+  <logger>be.kdg.java2.model.Laptop</logger>
+  <level>SEVERE</level>
+  <class>be.kdg.java2.model.Laptop</class>
+  <method>setName</method>
+  <thread>1</thread>
+  <message>The name cannot be empty or null for this Laptop: 'null' is not a valid name for this Laptop</message>
+</record>
+<record>
+  <date>2023-11-23T20:10:10.912355Z</date>
+  <millis>1700770210912</millis>
+  <nanos>355000</nanos>
+  <sequence>1</sequence>
+  <logger>be.kdg.java2.model.Laptop</logger>
+  <level>SEVERE</level>
+  <class>be.kdg.java2.model.Laptop</class>
+  <method>setReleaseDate</method>
+  <thread>1</thread>
+  <message>Release date must be older than today: 2078-12-18</message>
+</record>
+<record>
+  <date>2023-11-23T20:10:10.919347300Z</date>
+  <millis>1700770210919</millis>
+  <nanos>347300</nanos>
+  <sequence>2</sequence>
+  <logger>be.kdg.java2.Demo_5</logger>
+  <level>INFO</level>
+  <class>Demo_5</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>eel log</message>
+</record>
+</log>

@@ -28,11 +28,6 @@ public class Laptop extends Device {
         this.category = category;
     }
 
-    public Laptop(List<Laptop> data) {
-    }
-
-
-
 
     public void setColour(String colour) {
         this.colour = colour;

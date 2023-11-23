@@ -21,7 +21,7 @@ public class Laptop implements Comparable<Laptop>{
     private LocalDate releaseDate;
     private String macAdres;
 
-    public Laptop() throws IllegalAccessException {
+    public Laptop() {
         this("Anoniem", "Ongekend", 0.0, 0, 0, Category.UNKNOWN  , LocalDate.now() , "onbekend");
 
     }
@@ -38,7 +38,7 @@ public class Laptop implements Comparable<Laptop>{
      * @param macAdres   Het MAC-adres van de laptop.
      * @throws IllegalAccessException Wordt gegenereerd als de naam leeg of null is.
      */
-    public Laptop(String name, String colour, double price, int ram, int storage, Category category, LocalDate releaseDate , String macAdres) throws IllegalAccessException {
+    public Laptop(String name, String colour, double price, int ram, int storage, Category category, LocalDate releaseDate , String macAdres) {
 
         this.setName(name);
         this.setColour(colour);
@@ -57,14 +57,14 @@ public class Laptop implements Comparable<Laptop>{
      * @param name De naam van de laptop.
      * @throws IllegalAccessException Wordt gegenereerd als de naam leeg of null is.
      */
-    public void setName(String name) throws IllegalAccessException {
+    public void setName(String name) throws IllegalArgumentException {
 
         if ( name != null && !name.isEmpty()){
             this.name=name;
 
         }else {
             System.out.println("The name cannot be empty!!");
-            throw  new IllegalAccessException("Something went wrong 'with the name'!!");
+            throw  new IllegalArgumentException("Something went wrong 'with the name'!!");
 
         }
     }
