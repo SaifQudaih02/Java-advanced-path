@@ -27,9 +27,11 @@ public class Demo_5 {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
+        logger.severe("test severe");
 
         /** aantal foutieve basisobjecten aan om de logging te testen.*/
+        logger.log(Level.FINER, "Your log message here");
+
         laptop.setName(null);
         laptop.setReleaseDate(LocalDate.of(2078, 12, 18));
 
@@ -39,7 +41,7 @@ public class Demo_5 {
         laptops.setLaptop(new Laptop("SAMSUNG", "Zilver", 800.00, 16, 512, Category.UNKNOWN, LocalDate.of(2018, 9, 20), "SDEL45648"));
         laptops.remove("IJKL45679");
 
-        logger.log(Level.INFO , "eel log");
+        logger.log(Level.FINER , "eel log");
 
     }
 }

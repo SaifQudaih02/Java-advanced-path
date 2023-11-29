@@ -2,7 +2,6 @@ package persist;
 
 import model.Category;
 import model.Laptop;
-import model.Laptops;
 
 import java.sql.*;
 import java.time.LocalDate;
@@ -28,19 +27,10 @@ public class LaptopDbDao implements LaptopDao {
             createTable();
         } catch (SQLException e) {
             logger.log(Level.SEVERE, "SQLException " + e);
-        } finally {
-            try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
-                logger.log(Level.SEVERE, "Error clossing connection", e.getMessage());
-            }
         }
     }
 
 
-    // todo "gedaan behalve statment close"
     private void createTable() {
         try (Statement statement = connection.createStatement()) {
             /** voor de DDL "CREATE OR DROP" gebuik execute! */
@@ -49,24 +39,8 @@ public class LaptopDbDao implements LaptopDao {
 
         } catch (SQLException e) {
             logger.log(Level.SEVERE, "Error creating table: " + e.getMessage());
-        } finally {
-            try {
-                if (connection != null) {
-                    // todo colse the statement
-                    connection.close();
-                }
-            } catch (SQLException e) {
-                logger.log(Level.SEVERE, "Error clossing connection :" + e.getMessage());
-            } finally {
-                try {
-                    if (connection != null) {
-                        connection.close();
-                    }
-                } catch (SQLException e) {
-                    logger.log(Level.SEVERE, "Error closing connesction", e.getMessage());
-                }
-            }
         }
+
     }
 
 
@@ -87,14 +61,6 @@ public class LaptopDbDao implements LaptopDao {
             return preparedStatement.executeUpdate() > 0;
         } catch (SQLException e) {
             logger.log(Level.SEVERE, "Error inserting laptop: " + e.getMessage(), e);
-        } finally {
-            try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
-                logger.log(Level.SEVERE, "Error closing connesction", e.getMessage());
-            }
         }
         return false;
     }
@@ -108,14 +74,6 @@ public class LaptopDbDao implements LaptopDao {
         } catch (SQLException e) {
             logger.log(Level.SEVERE, "Error deleting laptop" + e.getMessage());
 
-        } finally {
-            try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
-                logger.log(Level.SEVERE, "Error closing connesction", e.getMessage());
-            }
         }
         return false;
     }
@@ -139,15 +97,6 @@ public class LaptopDbDao implements LaptopDao {
 
         } catch (SQLException e) {
             logger.log(Level.SEVERE, "Error updating laptop: " + e.getMessage());
-        } finally {
-            try {
-                if (connection != null) {
-                    connection.close();
-
-                }
-            } catch (SQLException e) {
-                logger.log(Level.SEVERE, "Error closing connesction", e.getMessage());
-            }
         }
 
         return false;
@@ -157,8 +106,10 @@ public class LaptopDbDao implements LaptopDao {
     public Laptop retrieve(String macAdres) {
         String sql = "SELECT * FROM laptoptable WHERE macAdres = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-            resultSet = preparedStatement.getResultSet();
-            if (resultSet.next()) {
+            preparedStatement.setString(1, macAdres); // Set the parameter for the query
+            resultSet = preparedStatement.executeQuery(); // Execute the query to populate resultSet
+
+            if (resultSet.next()) { // Check if there are results before retrieving data
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 String colour = resultSet.getString("colour");
@@ -172,53 +123,38 @@ public class LaptopDbDao implements LaptopDao {
             }
         } catch (SQLException e) {
             logger.log(Level.SEVERE, "Error retrieving laptop: " + e.getMessage(), e);
-        } finally {
-            try {
-                if (resultSet != null) resultSet.close();
-                //if (statement != null) statement.close();
-                if (connection != null) connection.close();
-            } catch (SQLException e) {
-                logger.log(Level.SEVERE, "Error closing connesction", e.getMessage());
-            }
-            return null;
         }
+        return null;
+
     }
 
+    // todo accesmodifier private
     @Override
     public List<Laptop> sortedOn(String query) {
-        // todo close the connection
         List<Laptop> laptopList = new ArrayList<>();
-        try (PreparedStatement preparedStatement = connection.prepareStatement(query)){
-            resultSet = preparedStatement.getResultSet();
-            int id = resultSet.getInt("id");
-            String name = resultSet.getString("name");
-            String colour = resultSet.getString("colour");
-            double price = resultSet.getDouble("price");
-            int ram = resultSet.getInt("ram");
-            int storage = resultSet.getInt("storage");
-            Category category = Category.valueOf(resultSet.getString("category"));
-            LocalDate releaseDate = resultSet.getDate("releaseDate").toLocalDate();
-            String macAdres = resultSet.getString("macAdres");
-            Laptop laptop = new Laptop(id, name, colour, price, ram, storage, category, releaseDate, macAdres);
-            laptopList.add(laptop);
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            resultSet = preparedStatement.executeQuery(); // Execute the query
 
-            return laptopList;
+            while (resultSet.next()) { // Move the cursor to the next row
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                String colour = resultSet.getString("colour");
+                double price = resultSet.getDouble("price");
+                int ram = resultSet.getInt("ram");
+                int storage = resultSet.getInt("storage");
+                Category category = Category.valueOf(resultSet.getString("category"));
+                LocalDate releaseDate = resultSet.getDate("releaseDate").toLocalDate();
+                String macAdres = resultSet.getString("macAdres");
+                Laptop laptop = new Laptop(id, name, colour, price, ram, storage, category, releaseDate, macAdres);
+                laptopList.add(laptop);
+            }
 
         } catch (SQLException e) {
             logger.log(Level.SEVERE, "Error sorting laptop: " + e.getMessage(), e);
-        } finally {
-            try {
-                if (resultSet != null) resultSet.close();
-                //if (statement != null) statement.close();
-                if (connection != null) connection.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-
         }
-        // todo check de return
-        return null;
+        return laptopList;
     }
+
 
     public List<Laptop> sortedOnName() {
         String query = "SELECT * FROM laptoptable ORDER BY name";
@@ -230,9 +166,12 @@ public class LaptopDbDao implements LaptopDao {
         return sortedOn(query);
     }
 
-    public List<Laptop> sortedOnding(){
-        String query = "SELECT * FROM laptoptable ORDER BY price";
+    public void close() {
+        try {
+            connection.close();
+        } catch (SQLException e) {
 
-        return sortedOn(query);
+        }
     }
+
 }

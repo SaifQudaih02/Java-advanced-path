@@ -25,4 +25,6 @@ public class Data {
         laptops.add(new Laptop("SAMSUNG", "Zilver", 799.99, 12, 512, Category.BUSINESS, LocalDate.of(2022, 12, 18), "5678EFGH"));
         return laptops;
     }
+
+
 }

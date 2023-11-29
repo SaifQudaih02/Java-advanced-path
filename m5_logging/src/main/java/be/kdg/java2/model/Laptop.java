@@ -44,8 +44,6 @@ public class Laptop implements Comparable<Laptop>{
             this.name=name;
 
         }else {
-          //  System.out.println("The name cannot be empty!!");
-           // throw  new  IllegalArgumentException ("Something went wrong 'with the name'!!");
             String errorMessage = "The name cannot be empty or null for this Laptop";
             logger.severe(String.format("%s: '%s' is not a valid name for this Laptop", errorMessage, name));
 
@@ -72,21 +70,17 @@ public class Laptop implements Comparable<Laptop>{
         this.category = category;
     }
 
-    public void setReleaseDate(LocalDate releaseDate) /*throws IllegalArgumentException*/{
+    public void setReleaseDate(LocalDate releaseDate){
 
         LocalDate currentDate = LocalDate.now();
 
         if (currentDate.isBefore(releaseDate)){
-        //    throw new IllegalArgumentException("Something went wrong 'with the releaseDate' ");
             String errorMessage = String.format("Release date must be older than today: %s", releaseDate);
 
             logger.log(Level.SEVERE , errorMessage);
 
         }else {
             this.releaseDate = releaseDate;
-            // System.out.println("releaseDate must be older than today");
-
-
         }
     }
 

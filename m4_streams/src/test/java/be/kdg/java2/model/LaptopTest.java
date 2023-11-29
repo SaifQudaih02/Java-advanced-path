@@ -40,9 +40,7 @@ class LaptopTest {
     @Test
     void testIllegalName(){
 
-
-            assertThrows(IllegalArgumentException.class, () -> laptop.setName(""), "the Laptop name  is legal");
-            // todo  Zorg daarna dat de test slaagt
+         assertThrows(IllegalArgumentException.class, () -> laptop.setName(""), "the Laptop name  is legal");
 
     }
     @Test

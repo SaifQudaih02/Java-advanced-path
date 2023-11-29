@@ -3,6 +3,7 @@ package model;
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.*;
+import java.util.function.Function;
 
 public class Laptops implements Serializable {
 

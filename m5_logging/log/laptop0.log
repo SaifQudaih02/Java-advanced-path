@@ -18,3 +18,119 @@ nov. 23, 2023 6:52:25 P.M. be.kdg.java2.model.Laptop setReleaseDate
 SEVERE: Release date must be older than today: 2078-12-18
 nov. 23, 2023 6:52:25 P.M. Demo_5 main
 INFO: eel log
+nov. 27, 2023 2:11:44 P.M. be.kdg.java2.model.Laptop setName
+SEVERE: The name cannot be empty or null for this Laptop: 'null' is not a valid name for this Laptop
+nov. 27, 2023 2:11:44 P.M. be.kdg.java2.model.Laptop setReleaseDate
+SEVERE: Release date must be older than today: 2078-12-18
+nov. 27, 2023 2:12:10 P.M. be.kdg.java2.model.Laptop setName
+SEVERE: The name cannot be empty or null for this Laptop: 'null' is not a valid name for this Laptop
+nov. 27, 2023 2:12:10 P.M. be.kdg.java2.model.Laptop setReleaseDate
+SEVERE: Release date must be older than today: 2078-12-18
+nov. 27, 2023 2:17:14 P.M. be.kdg.java2.model.Laptop setName
+SEVERE: The name cannot be empty or null for this Laptop: 'null' is not a valid name for this Laptop
+nov. 27, 2023 2:17:14 P.M. be.kdg.java2.model.Laptop setReleaseDate
+SEVERE: Release date must be older than today: 2078-12-18
+nov. 27, 2023 2:17:46 P.M. be.kdg.java2.model.Laptop setName
+SEVERE: The name cannot be empty or null for this Laptop: 'null' is not a valid name for this Laptop
+nov. 27, 2023 2:17:46 P.M. be.kdg.java2.model.Laptop setReleaseDate
+SEVERE: Release date must be older than today: 2078-12-18
+nov. 29, 2023 10:28:10 A.M. be.kdg.java2.model.Laptop setName
+SEVERE: The name cannot be empty or null for this Laptop: 'null' is not a valid name for this Laptop
+nov. 29, 2023 10:28:10 A.M. be.kdg.java2.model.Laptop setReleaseDate
+SEVERE: Release date must be older than today: 2078-12-18
+nov. 29, 2023 10:28:44 A.M. be.kdg.java2.model.Laptop setName
+SEVERE: The name cannot be empty or null for this Laptop: 'null' is not a valid name for this Laptop
+nov. 29, 2023 10:28:44 A.M. be.kdg.java2.model.Laptop setReleaseDate
+SEVERE: Release date must be older than today: 2078-12-18
+nov. 29, 2023 10:30:07 A.M. Demo_5 main
+SEVERE: test severe
+nov. 29, 2023 10:30:07 A.M. be.kdg.java2.model.Laptop setName
+SEVERE: The name cannot be empty or null for this Laptop: 'null' is not a valid name for this Laptop
+nov. 29, 2023 10:30:07 A.M. be.kdg.java2.model.Laptop setReleaseDate
+SEVERE: Release date must be older than today: 2078-12-18
+nov. 29, 2023 10:31:00 A.M. Demo_5 main
+SEVERE: test severe
+nov. 29, 2023 10:31:00 A.M. be.kdg.java2.model.Laptop setName
+SEVERE: The name cannot be empty or null for this Laptop: 'null' is not a valid name for this Laptop
+nov. 29, 2023 10:31:00 A.M. be.kdg.java2.model.Laptop setReleaseDate
+SEVERE: Release date must be older than today: 2078-12-18
+nov. 29, 2023 10:32:44 A.M. Demo_5 main
+SEVERE: test severe
+nov. 29, 2023 10:32:44 A.M. Demo_5 main
+FINER: Your log message here
+nov. 29, 2023 10:32:44 A.M. be.kdg.java2.model.Laptop setName
+SEVERE: The name cannot be empty or null for this Laptop: 'null' is not a valid name for this Laptop
+nov. 29, 2023 10:32:44 A.M. be.kdg.java2.model.Laptop setReleaseDate
+SEVERE: Release date must be older than today: 2078-12-18
+nov. 29, 2023 10:32:44 A.M. be.kdg.java2.model.Laptops setLaptop
+FINER: Laptop added: MACBOOK
+nov. 29, 2023 10:32:44 A.M. be.kdg.java2.model.Laptops setLaptop
+FINER: Laptop added: MACBOOK-Air
+nov. 29, 2023 10:32:44 A.M. be.kdg.java2.model.Laptops setLaptop
+FINER: Laptop added: MACBOOK
+nov. 29, 2023 10:32:44 A.M. be.kdg.java2.model.Laptops setLaptop
+FINER: Laptop added: SAMSUNG
+nov. 29, 2023 10:32:44 A.M. be.kdg.java2.model.Laptops remove
+FINER: Laptop removed: MACBOOK
+nov. 29, 2023 10:32:44 A.M. Demo_5 main
+FINER: eel log
+nov. 29, 2023 10:33:08 A.M. Demo_5 main
+SEVERE: test severe
+nov. 29, 2023 10:33:08 A.M. Demo_5 main
+FINER: Your log message here
+nov. 29, 2023 10:33:08 A.M. be.kdg.java2.model.Laptop setName
+SEVERE: The name cannot be empty or null for this Laptop: 'null' is not a valid name for this Laptop
+nov. 29, 2023 10:33:08 A.M. be.kdg.java2.model.Laptop setReleaseDate
+SEVERE: Release date must be older than today: 2078-12-18
+nov. 29, 2023 10:33:08 A.M. be.kdg.java2.model.Laptops setLaptop
+FINER: Laptop added: MACBOOK
+nov. 29, 2023 10:33:08 A.M. be.kdg.java2.model.Laptops setLaptop
+FINER: Laptop added: MACBOOK-Air
+nov. 29, 2023 10:33:08 A.M. be.kdg.java2.model.Laptops setLaptop
+FINER: Laptop added: MACBOOK
+nov. 29, 2023 10:33:08 A.M. be.kdg.java2.model.Laptops setLaptop
+FINER: Laptop added: SAMSUNG
+nov. 29, 2023 10:33:08 A.M. be.kdg.java2.model.Laptops remove
+FINER: Laptop removed: MACBOOK
+nov. 29, 2023 10:33:08 A.M. Demo_5 main
+FINER: eel log
+nov. 29, 2023 10:33:49 A.M. Demo_5 main
+SEVERE: test severe
+nov. 29, 2023 10:33:49 A.M. Demo_5 main
+FINER: Your log message here
+nov. 29, 2023 10:33:49 A.M. be.kdg.java2.model.Laptop setName
+SEVERE: The name cannot be empty or null for this Laptop: 'null' is not a valid name for this Laptop
+nov. 29, 2023 10:33:49 A.M. be.kdg.java2.model.Laptop setReleaseDate
+SEVERE: Release date must be older than today: 2078-12-18
+nov. 29, 2023 10:33:49 A.M. be.kdg.java2.model.Laptops setLaptop
+FINER: Laptop added: MACBOOK
+nov. 29, 2023 10:33:49 A.M. be.kdg.java2.model.Laptops setLaptop
+FINER: Laptop added: MACBOOK-Air
+nov. 29, 2023 10:33:49 A.M. be.kdg.java2.model.Laptops setLaptop
+FINER: Laptop added: MACBOOK
+nov. 29, 2023 10:33:49 A.M. be.kdg.java2.model.Laptops setLaptop
+FINER: Laptop added: SAMSUNG
+nov. 29, 2023 10:33:49 A.M. be.kdg.java2.model.Laptops remove
+FINER: Laptop removed: MACBOOK
+nov. 29, 2023 10:33:49 A.M. Demo_5 main
+FINER: eel log
+nov. 29, 2023 10:34:24 A.M. Demo_5 main
+SEVERE: test severe
+nov. 29, 2023 10:34:24 A.M. Demo_5 main
+FINER: Your log message here
+nov. 29, 2023 10:34:24 A.M. be.kdg.java2.model.Laptop setName
+SEVERE: The name cannot be empty or null for this Laptop: 'null' is not a valid name for this Laptop
+nov. 29, 2023 10:34:24 A.M. be.kdg.java2.model.Laptop setReleaseDate
+SEVERE: Release date must be older than today: 2078-12-18
+nov. 29, 2023 10:34:24 A.M. be.kdg.java2.model.Laptops setLaptop
+FINER: Laptop added: MACBOOK
+nov. 29, 2023 10:34:24 A.M. be.kdg.java2.model.Laptops setLaptop
+FINER: Laptop added: MACBOOK-Air
+nov. 29, 2023 10:34:24 A.M. be.kdg.java2.model.Laptops setLaptop
+FINER: Laptop added: MACBOOK
+nov. 29, 2023 10:34:24 A.M. be.kdg.java2.model.Laptops setLaptop
+FINER: Laptop added: SAMSUNG
+nov. 29, 2023 10:34:24 A.M. be.kdg.java2.model.Laptops remove
+FINER: Laptop removed: MACBOOK
+nov. 29, 2023 10:34:24 A.M. Demo_5 main
+FINER: eel log
