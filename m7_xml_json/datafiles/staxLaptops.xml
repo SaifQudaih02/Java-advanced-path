@@ -1,0 +1,138 @@
+<?xml version="1.0" ?>
+<Laptops>
+  <Laptop Category="GAMING">
+    <name>HP</name>
+    <Colour>Zwart</Colour>
+    <Price>899.99</Price>
+    <Ram>16</Ram>
+    <Storage>512</Storage>
+    <ReleaseDate>2022-05-15</ReleaseDate>
+    <MacAddress>ABCD12345</MacAddress>
+  </Laptop>
+  <Laptop Category="BUSINESS">
+    <name>SAMSUNG</name>
+    <Colour>Zilver</Colour>
+    <Price>999.99</Price>
+    <Ram>8</Ram>
+    <Storage>256</Storage>
+    <ReleaseDate>2022-04-10</ReleaseDate>
+    <MacAddress>EFGH67890</MacAddress>
+  </Laptop>
+  <Laptop Category="HOME">
+    <name>MACBOOK</name>
+    <Colour>Blauw</Colour>
+    <Price>749.99</Price>
+    <Ram>12</Ram>
+    <Storage>512</Storage>
+    <ReleaseDate>2021-09-20</ReleaseDate>
+    <MacAddress>IJKL45678</MacAddress>
+  </Laptop>
+  <Laptop Category="GAMING">
+    <name>DELL</name>
+    <Colour>Rood</Colour>
+    <Price>1299.99</Price>
+    <Ram>32</Ram>
+    <Storage>1000</Storage>
+    <ReleaseDate>2022-08-05</ReleaseDate>
+    <MacAddress>MNOP12345</MacAddress>
+  </Laptop>
+  <Laptop Category="HOME">
+    <name>LENOVO</name>
+    <Colour>Grijs</Colour>
+    <Price>599.99</Price>
+    <Ram>4</Ram>
+    <Storage>128</Storage>
+    <ReleaseDate>2022-03-25</ReleaseDate>
+    <MacAddress>QRST67890</MacAddress>
+  </Laptop>
+  <Laptop Category="BUSINESS">
+    <name>ASUS</name>
+    <Colour>Zwart</Colour>
+    <Price>799.99</Price>
+    <Ram>8</Ram>
+    <Storage>256</Storage>
+    <ReleaseDate>2022-01-10</ReleaseDate>
+    <MacAddress>UVWX45678</MacAddress>
+  </Laptop>
+  <Laptop Category="GAMING">
+    <name>ASUS</name>
+    <Colour>Wit</Colour>
+    <Price>1199.99</Price>
+    <Ram>16</Ram>
+    <Storage>512</Storage>
+    <ReleaseDate>2022-06-30</ReleaseDate>
+    <MacAddress>YZAB12345</MacAddress>
+  </Laptop>
+  <Laptop Category="HOME">
+    <name>ASUS</name>
+    <Colour>Roze</Colour>
+    <Price>699.99</Price>
+    <Ram>4</Ram>
+    <Storage>256</Storage>
+    <ReleaseDate>2021-11-15</ReleaseDate>
+    <MacAddress>CDEF67890</MacAddress>
+  </Laptop>
+  <Laptop Category="BUSINESS">
+    <name>LENOVO</name>
+    <Colour>Goud</Colour>
+    <Price>1499.99</Price>
+    <Ram>32</Ram>
+    <Storage>1000</Storage>
+    <ReleaseDate>2022-07-12</ReleaseDate>
+    <MacAddress>GHIJ45678</MacAddress>
+  </Laptop>
+  <Laptop Category="HOME">
+    <name>LENOVO</name>
+    <Colour>Zilver</Colour>
+    <Price>855.99</Price>
+    <Ram>8</Ram>
+    <Storage>512</Storage>
+    <ReleaseDate>2022-02-05</ReleaseDate>
+    <MacAddress>KLMN12345</MacAddress>
+  </Laptop>
+  <Laptop Category="GAMING">
+    <name>DELL</name>
+    <Colour>Blauw</Colour>
+    <Price>950.99</Price>
+    <Ram>16</Ram>
+    <Storage>512</Storage>
+    <ReleaseDate>2021-10-28</ReleaseDate>
+    <MacAddress>OPQR67890</MacAddress>
+  </Laptop>
+  <Laptop Category="BUSINESS">
+    <name>MACBOOK Air</name>
+    <Colour>Rood</Colour>
+    <Price>749.99</Price>
+    <Ram>8</Ram>
+    <Storage>256</Storage>
+    <ReleaseDate>2022-04-15</ReleaseDate>
+    <MacAddress>STUV45678</MacAddress>
+  </Laptop>
+  <Laptop Category="GAMING">
+    <name>DELL</name>
+    <Colour>Zwart</Colour>
+    <Price>1199.99</Price>
+    <Ram>32</Ram>
+    <Storage>1000</Storage>
+    <ReleaseDate>2022-09-03</ReleaseDate>
+    <MacAddress>WXYZ12345</MacAddress>
+  </Laptop>
+  <Laptop Category="HOME">
+    <name>HP</name>
+    <Colour>Wit</Colour>
+    <Price>599.99</Price>
+    <Ram>4</Ram>
+    <Storage>128</Storage>
+    <ReleaseDate>2022-03-08</ReleaseDate>
+    <MacAddress>1234ABCD</MacAddress>
+  </Laptop>
+  <Laptop Category="BUSINESS">
+    <name>SAMSUNG</name>
+    <Colour>Zilver</Colour>
+    <Price>799.99</Price>
+    <Ram>12</Ram>
+    <Storage>512</Storage>
+    <ReleaseDate>2022-12-18</ReleaseDate>
+    <MacAddress>5678EFGH</MacAddress>
+  </Laptop>
+</Laptops>

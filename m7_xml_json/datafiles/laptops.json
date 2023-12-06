@@ -1,0 +1,154 @@
+{
+  "laptopList": [
+    {
+      "name": "HP",
+      "colour": "Zwart",
+      "price": 899.99,
+      "ram": 16,
+      "storage": 512,
+      "category": "GAMING",
+      "releaseDate": "2022-05-15",
+      "macAdres": "ABCD12345"
+    },
+    {
+      "name": "SAMSUNG",
+      "colour": "Zilver",
+      "price": 999.99,
+      "ram": 8,
+      "storage": 256,
+      "category": "BUSINESS",
+      "releaseDate": "2022-04-10",
+      "macAdres": "EFGH67890"
+    },
+    {
+      "name": "MACBOOK",
+      "colour": "Blauw",
+      "price": 749.99,
+      "ram": 12,
+      "storage": 512,
+      "category": "HOME",
+      "releaseDate": "2021-09-20",
+      "macAdres": "IJKL45678"
+    },
+    {
+      "name": "DELL",
+      "colour": "Rood",
+      "price": 1299.99,
+      "ram": 32,
+      "storage": 1000,
+      "category": "GAMING",
+      "releaseDate": "2022-08-05",
+      "macAdres": "MNOP12345"
+    },
+    {
+      "name": "LENOVO",
+      "colour": "Grijs",
+      "price": 599.99,
+      "ram": 4,
+      "storage": 128,
+      "category": "HOME",
+      "releaseDate": "2022-03-25",
+      "macAdres": "QRST67890"
+    },
+    {
+      "name": "ASUS",
+      "colour": "Zwart",
+      "price": 799.99,
+      "ram": 8,
+      "storage": 256,
+      "category": "BUSINESS",
+      "releaseDate": "2022-01-10",
+      "macAdres": "UVWX45678"
+    },
+    {
+      "name": "ASUS",
+      "colour": "Wit",
+      "price": 1199.99,
+      "ram": 16,
+      "storage": 512,
+      "category": "GAMING",
+      "releaseDate": "2022-06-30",
+      "macAdres": "YZAB12345"
+    },
+    {
+      "name": "ASUS",
+      "colour": "Roze",
+      "price": 699.99,
+      "ram": 4,
+      "storage": 256,
+      "category": "HOME",
+      "releaseDate": "2021-11-15",
+      "macAdres": "CDEF67890"
+    },
+    {
+      "name": "LENOVO",
+      "colour": "Goud",
+      "price": 1499.99,
+      "ram": 32,
+      "storage": 1000,
+      "category": "BUSINESS",
+      "releaseDate": "2022-07-12",
+      "macAdres": "GHIJ45678"
+    },
+    {
+      "name": "LENOVO",
+      "colour": "Zilver",
+      "price": 855.99,
+      "ram": 8,
+      "storage": 512,
+      "category": "HOME",
+      "releaseDate": "2022-02-05",
+      "macAdres": "KLMN12345"
+    },
+    {
+      "name": "DELL",
+      "colour": "Blauw",
+      "price": 950.99,
+      "ram": 16,
+      "storage": 512,
+      "category": "GAMING",
+      "releaseDate": "2021-10-28",
+      "macAdres": "OPQR67890"
+    },
+    {
+      "name": "MACBOOK Air",
+      "colour": "Rood",
+      "price": 749.99,
+      "ram": 8,
+      "storage": 256,
+      "category": "BUSINESS",
+      "releaseDate": "2022-04-15",
+      "macAdres": "STUV45678"
+    },
+    {
+      "name": "DELL",
+      "colour": "Zwart",
+      "price": 1199.99,
+      "ram": 32,
+      "storage": 1000,
+      "category": "GAMING",
+      "releaseDate": "2022-09-03",
+      "macAdres": "WXYZ12345"
+    },
+    {
+      "name": "HP",
+      "colour": "Wit",
+      "price": 599.99,
+      "ram": 4,
+      "storage": 128,
+      "category": "HOME",
+      "releaseDate": "2022-03-08",
+      "macAdres": "1234ABCD"
+    },
+    {
+      "name": "SAMSUNG",
+      "colour": "Zilver",
+      "price": 799.99,
+      "ram": 12,
+      "storage": 512,
+      "category": "BUSINESS",
+      "releaseDate": "2022-12-18",
+      "macAdres": "5678EFGH"
+    }
+  ]
+}
