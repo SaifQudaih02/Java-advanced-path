@@ -3,6 +3,7 @@ package parsing;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
+import jakarta.xml.bind.Unmarshaller;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -31,12 +32,17 @@ public class LaptopsJaxbParser {
         try {
             JAXBContext jc = JAXBContext.newInstance(typeParameterClass.getClasses());
             return (T) jc.createUnmarshaller().unmarshal(new FileReader(file));
-
+//            Unmarshaller unmarshaller = jc.createUnmarshaller();
+//            File file1 = new File(file);
+//
+//            Class<T> tP = (Class<T>) unmarshaller.unmarshal(file1);
+//
+//            return (T) tP;
         } catch (JAXBException | FileNotFoundException e) {
             e.printStackTrace();
-        }
-        return null;
 
+        } 
+        return null;
     }
 
 }

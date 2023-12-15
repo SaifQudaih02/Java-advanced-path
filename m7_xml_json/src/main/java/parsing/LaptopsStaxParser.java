@@ -1,6 +1,4 @@
 package parsing;
-
-import Data.Data;
 import com.sun.xml.txw2.output.IndentingXMLStreamWriter;
 import model.Laptop;
 import model.Laptops;

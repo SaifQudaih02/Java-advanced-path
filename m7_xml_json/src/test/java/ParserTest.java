@@ -1,20 +1,11 @@
 import Data.Data;
-import model.Laptop;
 import model.Laptops;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.xml.sax.SAXException;
 import parsing.LaptopsDomParser;
 import parsing.LaptopsGsonParser;
 import parsing.LaptopsJaxbParser;
 import parsing.LaptopsStaxParser;
-
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.stream.XMLStreamException;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -54,17 +45,27 @@ public class ParserTest {
     @Test
     void testJaxb(){
         filePath = "datafiles/jaxbLaptops.xml";
-        // writing laptops from XML using JAXB
-        LaptopsJaxbParser.JaxbWriteXml(filePath, laptops);
-
-        // Reading laptops from XML using JAXB
-        Laptops parsedLaptops = LaptopsJaxbParser.JaxbReadXml(filePath, Laptops.class);
-
-        assertEquals(laptops.getSize(), parsedLaptops.getSize());
+//        // writing laptops from XML using JAXB
+//        LaptopsJaxbParser.JaxbWriteXml(filePath, laptops);
+//
+//        // Reading laptops from XML using JAXB
+//        Laptops parsedLaptops = LaptopsJaxbParser.JaxbReadXml(filePath, Laptops.class);
+//
+//        assertEquals(laptops.getSize(), parsedLaptops.getSize());
 //        assertDoesNotThrow(() -> LaptopsJaxbParser.JaxbWriteXml(filePath, laptops));
 //        Laptops[] laptopList = new Laptops[1];
 //        assertDoesNotThrow(() -> laptopList[0] = LaptopsJaxbParser.JaxbReadXml(filePath, Laptops.class));
 //        assertEquals(laptops.getLaptopList(), laptopList[0].getLaptopList());
+
+        assertDoesNotThrow(() -> LaptopsJaxbParser.JaxbWriteXml(filePath, laptops));
+
+        // Reading laptops from XML using JAXB
+        Laptops parsedLaptops = assertDoesNotThrow(() -> LaptopsJaxbParser.JaxbReadXml(filePath, Laptops.class));
+
+        // Comparing original laptops with parsed laptops
+        assertEquals(laptops.getSize(), parsedLaptops.getSize());
+        assertEquals(laptops.getAllLaptops(), parsedLaptops.getAllLaptops());
+
     }
 
     @Test
@@ -73,8 +74,6 @@ public class ParserTest {
         assertDoesNotThrow(() -> LaptopsGsonParser.writeJson(laptops, filePath));
         assertDoesNotThrow(() -> LaptopsGsonParser.readJson(filePath));
         assertEquals(laptops.getLaptopList(), LaptopsGsonParser.readJson(filePath).getLaptopList());
-
-
 
     }
 }
