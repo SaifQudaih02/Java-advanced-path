@@ -1,5 +1,8 @@
 package kollections;
 
+import kollections.lists.ArrayList;
+import kollections.lists.List;
+
 public class Kollections {
 
     private Kollections() {

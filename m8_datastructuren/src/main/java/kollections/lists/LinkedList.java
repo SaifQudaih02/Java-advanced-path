@@ -1,4 +1,4 @@
-package kollections;
+package kollections.lists;
 
 public class LinkedList<E> implements List<E> {
     static class Node<V> {
@@ -106,5 +106,20 @@ public class LinkedList<E> implements List<E> {
             node = node.next;
         }
         return node.value;
+    }
+
+    @Override
+    public int indexOf(E element) {
+        return 0;
+    }
+
+    @Override
+    public boolean remove(E element) {
+        return false;
+    }
+
+    @Override
+    public boolean contains(E element) {
+        return false;
     }
 }

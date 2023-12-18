@@ -1,10 +1,12 @@
 import kollections.Kollections;
-import kollections.LinkedList;
+import kollections.lists.LinkedList;
+import kollections.maps.HashMap;
+import kollections.maps.Map;
 import model.Category;
 import model.Laptop;
 import model.LaptopFactory;
 
-import kollections.List;
+import kollections.lists.List;
 
 import java.time.LocalDate;
 import java.util.Comparator;
@@ -104,5 +106,19 @@ public class Demo_8 {
         System.out.println("Index of laptop " + emptyLaptop.getMacAdres() + ": " + Kollections.lineairSearch(laptopList4, emptyLaptop));
         System.out.println("Index of laptop " + emptyLaptop.getMacAdres() + ": " + Kollections.binarySearch(laptopList4, emptyLaptop));
 
+         System.out.println("Hashmap");
+        System.out.println("===================================");
+        Map<String, Laptop> laptopMap = new HashMap<>();
+        laptopMap.put("key1", LaptopFactory.newRandomLaptop());
+        laptopMap.put("key2", LaptopFactory.newRandomLaptop());
+        System.out.println(laptopMap.get("key1"));
+        System.out.println(laptopMap.get("key2"));
+        System.out.println();
+
+        PerformanceTester.compareListMapToHashMap(100);
+
+        System.out.println("Sets");
+        System.out.println("===================================");
+        PerformanceTester.compareArraySetToTreeSet(100);
     }
 }

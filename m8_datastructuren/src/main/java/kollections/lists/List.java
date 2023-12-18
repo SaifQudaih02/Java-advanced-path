@@ -1,4 +1,4 @@
-package kollections;
+package kollections.lists;
 
 public interface List<T> {
     void add(int index, T element);
@@ -7,5 +7,9 @@ public interface List<T> {
     int size();
     T remove(int index);
     T get(int index);
+     int indexOf(T element);
 
+    boolean remove(T element);
+
+    boolean contains(T element);
 }

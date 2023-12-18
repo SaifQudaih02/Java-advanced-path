@@ -1,6 +1,8 @@
-package kollections;
+package kollections.lists;
 
-public class ArrayList <E> implements List<E>{
+import kollections.Kollections;
+
+public class ArrayList <E> implements List<E> {
     private static final int INITIAL_CAPACITY = 10;
     private Object[] elements;
     private int size;
@@ -31,10 +33,7 @@ public class ArrayList <E> implements List<E>{
         if (index > this.size || index < 0) {
             throw new IndexOutOfBoundsException("index: " + index + ", size: " + size);
         }
-//
-//        if (size == INITIAL_CAPACITY){
-//            expand();
-//        }
+
         if (elements.length == size)
             expand();
         if (index == 0) {
@@ -88,6 +87,22 @@ public class ArrayList <E> implements List<E>{
             throw new IndexOutOfBoundsException("index: " + index + ", size: " + size);
         }
         return (E) elements[index];
+    }
+
+    @Override
+    public int indexOf(E element) {
+        return Kollections.lineairSearch(this, element);
+    }
+
+    @Override
+    public boolean remove(E element) {
+        return false;
+
+    }
+
+    @Override
+    public boolean contains(E element) {
+        return false;
     }
 }
 

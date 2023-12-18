@@ -1,10 +1,16 @@
 //package be.kdg.java2;
 
-import kollections.ArrayList;
+import kollections.lists.ArrayList;
 //import be.kdg.java2.kollections.Kollections;
 import  kollections.Kollections;
-import  kollections.LinkedList;
-import kollections.List;
+import kollections.lists.LinkedList;
+import kollections.lists.List;
+import kollections.maps.HashMap;
+import kollections.maps.ListMap;
+import kollections.maps.Map;
+import kollections.sets.ArraySet;
+import kollections.sets.Set;
+import kollections.sets.TreeSet;
 import model.Laptop;
 import model.LaptopFactory;
 
@@ -72,5 +78,67 @@ public class PerformanceTester {
             Kollections.mergeSort(randomList(n));
             System.out.println(n + ";" + Laptop.compareCounter);
         }
+    }
+
+    public static void compareArraySetToTreeSet(int n){
+        ArraySet<Laptop> array = new ArraySet<>();
+        TreeSet<Laptop> tree = new TreeSet<>();
+
+        Laptop.equalsCounter = 0;
+        Laptop.compareCounter = 0;
+
+        long time1 = System.nanoTime();
+        for(int i = 0; i < n; i++){
+            fillSet(array, n);
+        }
+        System.out.printf("\nArrayset, n = %d: equalsCount: %d", n, Laptop.equalsCounter);
+        System.out.printf("\nArrayset, n = %d: compareCount: %d", n, Laptop.compareCounter);
+        System.out.printf("\nArrayset, n = %d: nanoSec: %d", n, System.nanoTime() - time1);
+
+        Laptop.equalsCounter = 0;
+        Laptop.compareCounter = 0;
+
+        time1 = System.nanoTime();
+        for(int i = 0; i < n; i++){
+            fillSet(tree, n);
+        }
+        System.out.printf("\nTreeSet, n = %d: equalsCount: %d", n, Laptop.equalsCounter);
+        System.out.printf("\nTreeSet, n = %d: compareCount: %d", n, Laptop.compareCounter);
+        System.out.printf("\nTreeSet, n = %d: nanoSec: %d", n, System.nanoTime() - time1);
+    }
+
+    private static void fillSet(Set<Laptop> set, int n){
+        for(int i = 0; i < n; i++){
+            Laptop lap = LaptopFactory.newRandomLaptop();
+            set.add(lap);
+        }
+    }
+
+
+    public static void compareListMapToHashMap(int size){
+        ListMap<String, Laptop> listMap = new ListMap<>();
+        HashMap<String, Laptop> hashMap = new HashMap<>();
+
+        fillMap(listMap, size);
+        fillMap(hashMap, size);
+        Laptop.equalsCounter = 0;
+        long time1 = System.nanoTime();
+        for(int i = 0; i < size; i++){
+            listMap.get("laptop" + i);
+        }
+        System.out.println("Listmap: n = " + size + ", equalscount = " + Laptop.equalsCounter + ", nanosec: " + time1);
+
+        Laptop.equalsCounter = 0;
+        time1 = System.nanoTime();
+        for(int i = 0; i < size; i++){
+            hashMap.get("laptop" + i);
+        }
+        System.out.println("Hashmap: n = " + size + ", equalscount = " + Laptop.equalsCounter + ", nanosec: " + time1);
+    }
+
+    private static void fillMap(Map<String, Laptop> map, int n){
+        Laptop laptop = LaptopFactory.newRandomLaptop();
+        laptop.setMacAdres("4586gkivds" + n);
+        map.put(laptop.getMacAdres(), laptop);
     }
 }

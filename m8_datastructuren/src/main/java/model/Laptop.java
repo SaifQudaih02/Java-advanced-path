@@ -16,6 +16,8 @@ public class Laptop implements Comparable<Laptop>{
 
     public static long compareCounter = 0;
 
+    public static int equalsCounter = 0;
+
     public Laptop() throws IllegalArgumentException {
         this("Anoniem", "Ongekend", 0.0, 0, 0, Category.UNKNOWN  , LocalDate.now() , "onbekend");
 
@@ -131,23 +133,13 @@ public class Laptop implements Comparable<Laptop>{
 
     @Override
     public int compareTo(Laptop o) {
-
-        if (this.macAdres == null || o.macAdres == null) {
-            if (this.macAdres == null && o.macAdres == null) {
-                return 0; // Beide zijn null, dus ze zijn gelijk.
-            } else if (this.macAdres == null) {
-                return -1; // Dit object heeft een null macAdres, dus het is kleiner.
-            } else {
-                return 1; // Het andere object heeft een null macAdres, dus het is kleiner.
-            }
-        }
         compareCounter++;
         return this.macAdres.compareTo(o.macAdres);
     }
 
     @Override
     public String toString() {
-        return String.format("Laptop: %s Kleur: %s Prijs: %.2fRAM: %d GB Storage: %d GB Categorie: %s Releasedatum: %s MacAdres %s" ,
+        return String.format("Laptop: %s \t Kleur: %s \tPrijs: %.2fRAM: %d \tGB Storage: %d GB\t Categorie: %s\t Releasedatum: %s \tMacAdres %s" ,
                 name, colour, price, ram, storage, category, releaseDate, macAdres);
     }
 
