@@ -1,20 +1,28 @@
 package be.kdg.java2.model;
 
 import java.util.*;
+import java.util.concurrent.ArrayBlockingQueue;
 
 public class Laptops {
 
-    private TreeSet<Laptop> laptopSet;
+
+    private ArrayBlockingQueue<Laptop> laptops = new ArrayBlockingQueue<>(10000);
+
     public Laptops() {
-        laptopSet= new TreeSet<>();
+        this.laptops = laptops;
     }
 
-    public boolean setLaptop(Laptop laptop){
-        return laptopSet.add(laptop);
+    public boolean addLaptop(Laptop laptop) {
+        try {
+            laptops.put(laptop);
+        } catch (InterruptedException e) {
+          e.printStackTrace();
+        }
+        return false;
     }
 
     public boolean remove(String macadres) {
-        Iterator<Laptop> iterator = laptopSet.iterator();
+        Iterator<Laptop> iterator = laptops.iterator();
         while (iterator.hasNext()) {
             Laptop laptop = iterator.next();
             String laptopMacAdres = laptop.getMacAdres();
@@ -28,7 +36,7 @@ public class Laptops {
 
 
     public Laptop search(String macadres) {
-        for (Laptop laptop : laptopSet) {
+        for (Laptop laptop : laptops) {
             String laptopMacAdres = laptop.getMacAdres();
             if (laptopMacAdres != null && laptopMacAdres.equals(macadres)) {
                 return laptop;
@@ -38,7 +46,7 @@ public class Laptops {
     }
 
     public List<Laptop> sortedOnName() {
-        List<Laptop> sortedList = new ArrayList<>(laptopSet);
+        List<Laptop> sortedList = new ArrayList<>(laptops);
         sortedList.sort(new Comparator<Laptop>() {
             @Override
             public int compare(Laptop laptop1, Laptop laptop2) {
@@ -49,7 +57,7 @@ public class Laptops {
     }
 
     public List<Laptop> sortedOnPrice() {
-        List<Laptop> sortedList = new ArrayList<>(laptopSet);
+        List<Laptop> sortedList = new ArrayList<>(laptops);
         sortedList.sort(new Comparator<Laptop>() {
             @Override
             public int compare(Laptop laptop1, Laptop laptop2) {
@@ -59,7 +67,7 @@ public class Laptops {
         return sortedList;
     }
     public List<Laptop> sortedOnReleaseDate() {
-        List<Laptop> sortedList = new ArrayList<>(laptopSet);
+        List<Laptop> sortedList = new ArrayList<>(laptops);
         sortedList.sort(new Comparator<Laptop>() {
             @Override
             public int compare(Laptop laptop1, Laptop laptop2) {
@@ -72,10 +80,10 @@ public class Laptops {
 
 
    public Set<Laptop> getAllLaptops(){
-        return laptopSet;
+        return (Set<Laptop>) laptops;
    }
 
     public int getSize(){
-        return laptopSet.size();
+        return laptops.size();
     }
 }
