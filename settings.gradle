@@ -9,4 +9,6 @@ include 'm6_persistentie'
 include 'm7_xml_json'
 include 'm8_datastructuren'
 include 'm9_threads'
+include 'm10_dependency'
+include 'm10_dependency'
 
