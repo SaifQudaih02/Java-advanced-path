@@ -1,6 +1,4 @@
 package be.kdg.java2;
-
-import be.kdg.java2.database.LaptopDao;
 import be.kdg.java2.database.LaptopDbDao;
 import be.kdg.java2.service.LaptopsService;
 import be.kdg.java2.service.LaptopsServiceImpl;
